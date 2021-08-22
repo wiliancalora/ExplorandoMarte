@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{6FFF03B4-D508-4C84-B142-03EDEF1DCCD5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Services", "1 - Services", "{7FFE026A-8B81-4F6E-8BC2-491B764CDE0A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{24EBB7C1-A4B6-488F-A2F6-EFB20699E91D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{DF3A439C-7E3B-450E-B735-3B85B8610E86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{BC5190FB-170F-4959-9072-40000C776CB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marte.Services", "Marte.Services\Marte.Services.csproj", "{4F54D623-1665-4DA8-8E63-30145EC95076}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F54D623-1665-4DA8-8E63-30145EC95076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F54D623-1665-4DA8-8E63-30145EC95076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F54D623-1665-4DA8-8E63-30145EC95076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F54D623-1665-4DA8-8E63-30145EC95076}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4F54D623-1665-4DA8-8E63-30145EC95076} = {7FFE026A-8B81-4F6E-8BC2-491B764CDE0A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {07FF3322-3471-4F96-B549-7DFFA20A9023}
+	EndGlobalSection
+EndGlobal
