@@ -15,6 +15,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marte.Services", "Marte.Services\Marte.Services.csproj", "{4F54D623-1665-4DA8-8E63-30145EC95076}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marte.Application", "Marte.Application\Marte.Application.csproj", "{CED42278-FD78-418D-852B-83B9F1EE209C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marte.Domain", "Marte.Domain\Marte.Domain.csproj", "{4064C85D-6BCA-4070-B1CF-1246DABCD3E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marte.Infra", "Marte.Infra\Marte.Infra.csproj", "{8673AFA1-0CFB-4462-B81C-B5AEDB78212C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,12 +31,27 @@ Global
 		{4F54D623-1665-4DA8-8E63-30145EC95076}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F54D623-1665-4DA8-8E63-30145EC95076}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F54D623-1665-4DA8-8E63-30145EC95076}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CED42278-FD78-418D-852B-83B9F1EE209C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CED42278-FD78-418D-852B-83B9F1EE209C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CED42278-FD78-418D-852B-83B9F1EE209C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CED42278-FD78-418D-852B-83B9F1EE209C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4064C85D-6BCA-4070-B1CF-1246DABCD3E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4064C85D-6BCA-4070-B1CF-1246DABCD3E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4064C85D-6BCA-4070-B1CF-1246DABCD3E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4064C85D-6BCA-4070-B1CF-1246DABCD3E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8673AFA1-0CFB-4462-B81C-B5AEDB78212C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8673AFA1-0CFB-4462-B81C-B5AEDB78212C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8673AFA1-0CFB-4462-B81C-B5AEDB78212C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8673AFA1-0CFB-4462-B81C-B5AEDB78212C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4F54D623-1665-4DA8-8E63-30145EC95076} = {7FFE026A-8B81-4F6E-8BC2-491B764CDE0A}
+		{CED42278-FD78-418D-852B-83B9F1EE209C} = {24EBB7C1-A4B6-488F-A2F6-EFB20699E91D}
+		{4064C85D-6BCA-4070-B1CF-1246DABCD3E9} = {DF3A439C-7E3B-450E-B735-3B85B8610E86}
+		{8673AFA1-0CFB-4462-B81C-B5AEDB78212C} = {BC5190FB-170F-4959-9072-40000C776CB3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {07FF3322-3471-4F96-B549-7DFFA20A9023}
