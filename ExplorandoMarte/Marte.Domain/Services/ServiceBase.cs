@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Marte.Domain
+namespace Marte.Domain.Services
 {
     public abstract class ServiceBase<TEntity> : IServiceBase<TEntity> where TEntity : BaseEntity
     {

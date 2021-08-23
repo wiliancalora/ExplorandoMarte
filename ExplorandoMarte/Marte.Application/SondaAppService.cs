@@ -14,7 +14,7 @@ namespace Marte.Application
     {
         readonly ISondaService _sondaService;
 
-        public SondaAppService(SondaService sondaService) : base(sondaService)
+        public SondaAppService(ISondaService sondaService) : base(sondaService)
         {
             _sondaService = sondaService;
         }

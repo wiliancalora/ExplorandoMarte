@@ -1,3 +1,9 @@
+using Marte.Application;
+using Marte.Application.Interfaces;
+using Marte.Domain.Interfaces.Repositories;
+using Marte.Domain.Interfaces.Services;
+using Marte.Domain.Services;
+using Marte.Infra.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +38,12 @@ namespace Marte.Services
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Marte.Services", Version = "v1" });
             });
+
+            services.AddTransient<IExplorarAppService, ExplorarAppService>();
+
+            services.AddTransient<ISondaAppService, SondaAppService>();
+            services.AddTransient<ISondaService,    SondaService>();
+            services.AddTransient<ISondaRepository, SondaRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,5 +67,6 @@ namespace Marte.Services
                 endpoints.MapControllers();
             });
         }
+
     }
 }

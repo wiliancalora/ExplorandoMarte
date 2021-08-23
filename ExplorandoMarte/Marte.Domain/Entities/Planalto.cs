@@ -10,12 +10,12 @@ namespace Marte.Domain.Entities
     {
         public Planalto(int x, int y)
         {
-            this.Limite = new Coordenada { x = x, y = y };
+            this.Limite = new Coordenada(x, y);
             this.IdPlanalto = Guid.NewGuid().ToString();
             Sonda = new List<Sonda>();
         }
         public string IdPlanalto { get; set; }
-        private Coordenada Limite { get;}
+        public Coordenada Limite { get;}
         public List<Sonda> Sonda { get; set; }
     }
 }
