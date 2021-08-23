@@ -9,6 +9,6 @@ namespace Marte.Application.Interfaces
 {
     public interface IExplorarAppService
     {
-        string Explorar(Planalto planalto);
+        List<string> Explorar(Planalto planalto);
     }
 }

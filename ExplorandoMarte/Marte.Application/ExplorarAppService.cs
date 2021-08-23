@@ -19,17 +19,20 @@ namespace Marte.Application
             _sondaAppService = sondaAppService;
         }
 
-        public string Explorar(Planalto planalto)
+        public List<string> Explorar(Planalto planalto)
         {
 
-            //criar o planalto ADD
+            //Validar se o planalto ja existe
 
+            //Adicionar o planalto caso não existe
 
-            //criar as sondas ADD
+            //Adicionar as sondas
+
+            
+            List<string> retorno = new List<string>();
+
             foreach (var sonda in planalto.Sonda)
             {
-                //_sondaAppService.Insert(planalto.Sonda.FirstOrDefault());
-
                 foreach (char instrucao in sonda.Instrucoes)
                 {
                     switch (instrucao)
@@ -42,19 +45,19 @@ namespace Marte.Application
                             break;
                         case 'M':
 
-                            sonda.VerificarTrajetoSonda(planalto.Limite.x, planalto.Limite.y);
-
-                            sonda.Movimentar();
+                            if (sonda.TrajetoSondaValido(planalto.Limite.x, planalto.Limite.y))
+                            {
+                                sonda.Movimentar();
+                            }
                             break;
                     }
                 }
+
+                retorno.Add(sonda.GetPosicaoFinal(planalto.Limite.x, planalto.Limite.y));
+
             }
 
-
-
-            //enviar instrucoes
-
-            return planalto.Sonda.FirstOrDefault().GetPosicaoFinal();
+            return retorno;
         }
     }
 }

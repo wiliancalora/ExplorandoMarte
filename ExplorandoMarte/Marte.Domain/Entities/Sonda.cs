@@ -14,7 +14,7 @@ namespace Marte.Domain.Entities
             this.IdSonda = Guid.NewGuid().ToString();
             this.Direcao = (Dir)direcao;
         }
-        private enum Dir
+        public enum Dir
         {
             N = 0,
             E = 1,
@@ -47,12 +47,15 @@ namespace Marte.Domain.Entities
             }
         }
 
-        public void VerificarTrajetoSonda(int x, int y)
+        public bool TrajetoSondaValido(int x, int y)
         {
+
             if (Coordenada.x > x ||  Coordenada.y > y || Coordenada.x < 0 || Coordenada.y < 0) 
             {
-                throw new Exception("Sonda fora dos limites do planalto");
+                return false;
             }
+
+            return true;
         }
 
         public void RotacionarEsquerda()
@@ -78,9 +81,14 @@ namespace Marte.Domain.Entities
             this.Direcao += 1;
         }
 
-        public string GetPosicaoFinal()
+        public string GetPosicaoFinal(int x, int y)
         {
-            return Coordenada.x + " " + Coordenada.y + " " + Direcao;
+            if (!TrajetoSondaValido(x, y))
+            {
+                return "Resultado: A sonda " + IdSonda + " está fora da área do planalto";
+            }
+
+            return "Resultado: A sonda " + IdSonda + " está na posição " + Coordenada.x + " " + Coordenada.y + " " + Direcao;  
         }
     }
 }

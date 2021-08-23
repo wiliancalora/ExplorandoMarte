@@ -19,7 +19,8 @@ namespace Marte.Services.Controllers
         private readonly IExplorarAppService _explorarAppService;
 
         public ExplorarController(ILogger<ExplorarController> logger,
-                                  IExplorarAppService explorarAppService)
+                                  IExplorarAppService explorarAppService
+                                 )
         {
             _logger = logger;
             _explorarAppService = explorarAppService;
@@ -33,15 +34,15 @@ namespace Marte.Services.Controllers
                 _logger.LogInformation("Action Post :: UserController -> execute"
                        + DateTime.Now.ToLongTimeString());
 
+                Planalto planalto = new Planalto(planaltoModel.Limite.x, planaltoModel.Limite.y);
 
-                //Planalto planalto = new Planalto(5, 5);
-
-                //planalto.Sonda.Add(new Sonda(3, 3, 1));
-                //planalto.Sonda.FirstOrDefault().Instrucoes = "MMMMMMMMM";
-
-                //planalto.Sonda.Add(new Sonda(, 2, 0));
-                //planalto.Sonda.FirstOrDefault().Instrucoes = "LMLMLMLMM";
-
+                foreach (var sondaModel in planaltoModel.Sonda)
+                {
+                    var sonda = new Sonda(sondaModel.Coordenada.x, sondaModel.Coordenada.y, (int)(Enum.Parse(typeof(Sonda.Dir),sondaModel.Direcao)));
+                    sonda.Instrucoes = sondaModel.Instrucoes;
+                    planalto.Sonda.Add(sonda);
+                }
+                
                 var resultado = _explorarAppService.Explorar(planalto);
 
                 return StatusCode(StatusCodes.Status200OK, resultado);

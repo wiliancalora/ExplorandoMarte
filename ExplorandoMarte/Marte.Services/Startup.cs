@@ -34,6 +34,7 @@ namespace Marte.Services
         {
 
             services.AddControllers();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Marte.Services", Version = "v1" });
