@@ -34,8 +34,8 @@ namespace Marte.Services.Controllers
                 _logger.LogInformation("Action Post :: UserController -> execute"
                        + DateTime.Now.ToLongTimeString());
 
+                //Mapeamento do objeto de entrada
                 Planalto planalto = new Planalto(planaltoModel.Limite.x, planaltoModel.Limite.y);
-
                 foreach (var sondaModel in planaltoModel.Sonda)
                 {
                     var sonda = new Sonda(sondaModel.Coordenada.x, sondaModel.Coordenada.y, (int)(Enum.Parse(typeof(Sonda.Dir),sondaModel.Direcao)));

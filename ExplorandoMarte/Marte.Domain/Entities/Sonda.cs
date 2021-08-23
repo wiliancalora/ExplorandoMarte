@@ -21,7 +21,6 @@ namespace Marte.Domain.Entities
             S = 2,
             W = 3
         }
-
         public string IdSonda { get; }
         private Coordenada Coordenada { get; }
         private Dir Direcao { get; set; }

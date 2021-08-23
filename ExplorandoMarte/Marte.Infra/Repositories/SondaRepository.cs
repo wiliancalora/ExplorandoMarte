@@ -17,23 +17,5 @@ namespace Marte.Infra.Repositories
     {
         public SondaRepository(IConfiguration configuration) : base(configuration) { }
 
-        public override void Insert(Sonda entity)
-        {
-            try
-            {
-                using (var db = new SqlConnection(ConnectionString))
-                {
-                    DynamicParameters param = new DynamicParameters();
-                    //param.Add("x", entity.x);
-                    //param.Add("y", entity.y);
-                    //param.Add("direction", entity.direction);
-                    var addUser = db.QueryFirstOrDefault<Sonda>("AddSonda", param, commandType: CommandType.StoredProcedure);
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-        }
     }
 }
